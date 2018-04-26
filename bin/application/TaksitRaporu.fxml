@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane style="-fx-background-color:rgb(26,36,59)" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MenuDenetleyici">
+  <!-- TODO Add Nodes -->
+  <children>
+    <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="53.0" prefWidth="158.0" style="-fx-background-color:rgb(26,32,42)&#10;">
+      <children>
+        <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="53.0" prefWidth="168.0" style="-fx-background-color:rgb(0,64,64)">
+          <children>
+            <Label layoutX="52.0" layoutY="12.0" text="OSÖYS" textFill="WHITE">
+              <font>
+                <Font name="System Bold" size="20.0" fx:id="x1" />
+              </font>
+            </Label>
+          </children>
+        </AnchorPane>
+      </children>
+    </AnchorPane>
+    <AnchorPane layoutX="168.0" layoutY="2.0" prefHeight="53.0" prefWidth="640.0" style="-fx-background-color:rgb(0,102,204&#10;)" translateY="-2.0">
+      <children>
+        <Label font="$x1" layoutX="14.0" layoutY="14.0" text="Taksit Raporu">
+          <textFill>
+            <Color blue="0.749" green="0.749" red="0.749" fx:id="x2" />
+          </textFill>
+        </Label>
+        <Button layoutX="149.0" layoutY="0.0" mnemonicParsing="false" onAction="#baslatOgrenciler" opacity="0.48" prefHeight="53.0" prefWidth="123.0" text="Öğrenciler" />
+        <Button layoutX="272.0" mnemonicParsing="false" onAction="#baslatServisler" opacity="0.48" prefHeight="53.0" prefWidth="123.0" text="Servisler" />
+        <Button layoutX="394.0" layoutY="0.0" mnemonicParsing="false" onAction="#baslatOdeme" opacity="0.48" prefHeight="53.0" prefWidth="123.0" text="Ödeme" />
+        <Button layoutX="517.0" layoutY="0.0" mnemonicParsing="false" onAction="#baslatTaksitRaporu" opacity="0.67" prefHeight="53.0" prefWidth="123.0" text="Taksit Raporu" />
+      </children>
+    </AnchorPane>
+    <TableView layoutX="67.0" layoutY="327.0" prefHeight="217.0" prefWidth="600.0">
+      <columns>
+        <TableColumn prefWidth="75.0" text="İsim" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="75.0" text="Soyisim" />
+        <TableColumn prefWidth="75.0" text="Taksit No" />
+        <TableColumn prefWidth="75.0" text="Taksit Tarihi" />
+        <TableColumn prefWidth="75.0" text="Taksit Tutarı" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="126.0" text="Ödenen Tarih" />
+        <TableColumn prefWidth="97.0" text="Fatura Tarihi" />
+      </columns>
+    </TableView>
+    <Label font="$x1" layoutX="38.0" layoutY="81.0" text="Tarih Seçimi" textFill="$x2" />
+    <RadioButton layoutX="38.0" layoutY="123.0" mnemonicParsing="false" text="Aylık" textFill="WHITE" />
+    <ComboBox layoutX="96.0" layoutY="123.0" prefHeight="21.0" prefWidth="158.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <RadioButton layoutX="270.0" layoutY="126.0" mnemonicParsing="false" text="Tarih" textFill="WHITE" />
+    <ComboBox layoutX="325.0" layoutY="126.0" prefHeight="21.0" prefWidth="158.0" promptText="16.02.18">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <ComboBox layoutX="510.0" layoutY="126.0" prefHeight="21.0" prefWidth="158.0" promptText="16.04.18">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label font="$x1" layoutX="38.0" layoutY="159.0" text="Bakiye" textFill="$x2" />
+    <Label layoutX="40.0" layoutY="198.0" text="Taksitler" textAlignment="LEFT" textFill="WHITE">
+      <font>
+        <Font name="System Bold" size="13.0" fx:id="x3" />
+      </font>
+    </Label>
+    <ComboBox layoutX="106.0" layoutY="198.0" prefHeight="21.0" prefWidth="158.0" promptText="Ödenen Taksitler">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Label font="$x3" layoutX="412.0" layoutY="194.0" text="Toplam" textAlignment="LEFT" textFill="WHITE" />
+    <Label font="$x3" layoutX="412.0" layoutY="218.0" text="Ödenen" textAlignment="LEFT" textFill="WHITE" />
+    <Label font="$x3" layoutX="412.0" layoutY="247.0" text="Ödenmeyen" textAlignment="LEFT" textFill="WHITE" />
+    <TextField layoutX="493.0" layoutY="188.0" prefWidth="78.0" text="17" />
+    <TextField layoutX="493.0" layoutY="216.0" prefWidth="78.0" text="17" />
+    <TextField layoutX="493.0" layoutY="245.0" prefWidth="78.0" text="0" />
+    <TextField layoutX="589.0" layoutY="188.0" prefWidth="78.0" text="1700tl" />
+    <TextField layoutX="589.0" layoutY="216.0" prefWidth="78.0" text="1700tl" />
+    <TextField layoutX="589.0" layoutY="245.0" prefWidth="78.0" text="0" />
+    <Button layoutX="469.0" layoutY="294.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="205.0" text="Vadesi Geçen Taksitler" />
+  </children>
+</AnchorPane>

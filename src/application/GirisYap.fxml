@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane blendMode="SRC_OVER" cache="false" pickOnBounds="true" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color:#FFF;&#10;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GirisYapDenetleyici">
+  <!-- TODO Add Nodes -->
+  <children>
+    <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color:rgb(19,130,250)">
+      <children>
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="125.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../img/resim.png" />
+          </image>
+        </ImageView>
+        <Label layoutX="14.0" layoutY="240.0" minHeight="12.999900000002526" prefHeight="28.0" text="Okul Servisleri Öğrenci Yönetim Sistemi" textFill="WHITE">
+          <font>
+            <Font name="System Bold" size="20.0" />
+          </font>
+        </Label>
+      </children>
+    </AnchorPane>
+    <AnchorPane layoutX="400.0" prefHeight="400.0" prefWidth="399.9999000000025">
+      <children>
+        <TextField fx:id="kullaniciAdi" cache="true" cacheHint="DEFAULT" depthTest="INHERIT" layoutX="55.0" layoutY="145.0" prefHeight="38.0" prefWidth="290.0" promptText="Kullanıcı Adı" style="-fx-border: 5px solid red" text="" />
+        <PasswordField fx:id="sifre" layoutX="55.0" layoutY="200.0" prefHeight="38.0" prefWidth="290.0" promptText="Şifre" />
+        <Label layoutX="146.0" layoutY="77.0" prefHeight="28.0" prefWidth="122.0" text="Hoşgeldiniz" textFill="#1a33d5">
+          <font>
+            <Font size="21.0" />
+          </font>
+        </Label>
+        <Button contentDisplay="CENTER" layoutX="133.0" layoutY="263.0" mnemonicParsing="false" onAction="#girisYap" prefHeight="38.0" prefWidth="122.0" text="Giriş Yap" textFill="#103300" />
+            <Label fx:id="sifreYanlis" layoutX="119.0" layoutY="311.0">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="RED" />
+                        <Stop color="RED" offset="0.7216494845360825" />
+                        <Stop color="#ee0808" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane style="-fx-background-color:rgb(26,36,59)" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MenuDenetleyici">
+  <!-- TODO Add Nodes -->
+  <children>
+    <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="53.0" prefWidth="158.0" style="-fx-background-color:rgb(26,32,42)&#10;">
+      <children>
+        <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="53.0" prefWidth="168.0" style="-fx-background-color:rgb(0,64,64)">
+          <children>
+            <Label layoutX="52.0" layoutY="14.0" text="OSÖYS" textFill="WHITE">
+              <font>
+                <Font name="System Bold" size="20.0" fx:id="x2" />
+              </font>
+            </Label>
+          </children>
+        </AnchorPane>
+      </children>
+    </AnchorPane>
+    <AnchorPane layoutX="168.0" prefHeight="53.0" prefWidth="640.0" style="-fx-background-color:rgb(0,102,204&#10;)">
+      <children>
+        <Button layoutX="149.0" mnemonicParsing="false" onAction="#baslatOgrenciler" opacity="0.48" prefHeight="53.0" prefWidth="123.0" text="Öğrenciler" />
+        <Button layoutX="272.0" layoutY="0.0" mnemonicParsing="false" onAction="#baslatServisler" opacity="0.67" prefHeight="53.0" prefWidth="123.0" text="Servisler" />
+        <Button layoutX="394.0" mnemonicParsing="false" onAction="#baslatOdeme" opacity="0.48" prefHeight="53.0" prefWidth="123.0" text="Ödeme" />
+        <Button layoutX="517.0" layoutY="0.0" mnemonicParsing="false" onAction="#baslatTaksitRaporu" opacity="0.48" prefHeight="53.0" prefWidth="123.0" text="Taksit Raporu" />
+        <Label font="$x2" layoutX="48.0" layoutY="15.0" text="Servisler" textFill="#bfbfbf" />
+      </children>
+    </AnchorPane>
+    <TableView layoutX="64.0" layoutY="103.0" prefHeight="402.0" prefWidth="325.0">
+      <columns>
+        <TableColumn prefWidth="75.0" text="Araç Kodu" />
+        <TableColumn prefWidth="75.0" text="Araç Plaka" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="126.0" text="Şoför Ad Soyad" />
+      </columns>
+    </TableView>
+    <Label layoutX="445.0" layoutY="176.0" text="Araç Plaka" textAlignment="LEFT" textFill="WHITE">
+      <font>
+        <Font name="System Bold" size="13.0" fx:id="x1" />
+      </font>
+    </Label>
+    <TextField layoutX="561.0" layoutY="168.0" prefWidth="158.0" />
+    <Label font="$x1" layoutX="445.0" layoutY="210.0" text="Marka" textAlignment="LEFT" textFill="WHITE" />
+    <Label font="$x1" layoutX="445.0" layoutY="239.0" text="Model" textAlignment="LEFT" textFill="WHITE" />
+    <Label font="$x1" layoutX="445.0" layoutY="285.0" text="Kapasite" textAlignment="LEFT" textFill="WHITE" />
+    <TextField layoutX="561.0" layoutY="202.0" prefWidth="158.0" />
+    <TextField layoutX="561.0" layoutY="239.0" prefWidth="158.0" />
+    <TextField layoutX="561.0" layoutY="272.0" prefWidth="158.0" />
+    <Label font="$x2" layoutX="64.0" layoutY="64.0" text="Servis İşlemleri">
+      <textFill>
+        <Color blue="0.749" green="0.749" red="0.749" fx:id="x3" />
+      </textFill>
+    </Label>
+    <Label font="$x2" layoutX="561.0" layoutY="107.0" text="Araç Bilgileri" textFill="$x3" />
+    <Label font="$x1" layoutX="452.0" layoutY="384.0" text="Ad Soyad" textAlignment="LEFT" textFill="WHITE" />
+    <TextField layoutX="568.0" layoutY="376.0" prefWidth="158.0" />
+    <Label font="$x1" layoutX="452.0" layoutY="418.0" text="Adres" textAlignment="LEFT" textFill="WHITE" />
+    <Label font="$x1" layoutX="452.0" layoutY="447.0" text="Telefon" textAlignment="LEFT" textFill="WHITE" />
+    <Label font="$x1" layoutX="452.0" layoutY="493.0" text="Kan Grubu" textAlignment="LEFT" textFill="WHITE" />
+    <TextField layoutX="568.0" layoutY="410.0" prefWidth="158.0" />
+    <TextField layoutX="568.0" layoutY="447.0" prefWidth="158.0" />
+    <TextField layoutX="568.0" layoutY="480.0" prefWidth="158.0" />
+    <Label font="$x2" layoutX="568.0" layoutY="315.0" text="Şoför Bilgileri" textFill="$x3" />
+  </children>
+</AnchorPane>
